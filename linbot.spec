@@ -72,7 +72,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(644,root,root) /usr/lib/linbot/myUrlLib.py
 %attr(644,root,root) /usr/lib/linbot/robotparser.py
 %attr(644,root,root) /usr/lib/linbot/buttons/*
-%attr(644,root, man) %{_mandir}/man1/*
+%{_mandir}/man1/*
 
 %changelog
 * Sat Oct 03 1998 Arkadiusz Mi¶kiewicz <misiek@misiek.eu.org>
