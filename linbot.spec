@@ -49,9 +49,9 @@ Linbot pozwala webmasterom na:
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/usr/{lib/linbot/buttons,bin,man/man1}
 
-cp *.* $RPM_BUILD_ROOT/usr/lib/linbot
-cp contrib/cwlinbot.gif $RPM_BUILD_ROOT/usr/lib/linbot/buttons/linbot.gif
-cp contrib/buttons/*.* $RPM_BUILD_ROOT/usr/lib/linbot/buttons
+cp *.* $RPM_BUILD_ROOT%{_libdir}/linbot
+cp contrib/cwlinbot.gif $RPM_BUILD_ROOT%{_libdir}/linbot/buttons/linbot.gif
+cp contrib/buttons/*.* $RPM_BUILD_ROOT%{_libdir}/linbot/buttons
 cp contrib/linbot.1 $RPM_BUILD_ROOT%{_mandir}/man1
 cd $RPM_BUILD_ROOT/usr/bin; ln -s ../lib/linbot/linbot.py linbot
 
@@ -65,13 +65,13 @@ rm -rf $RPM_BUILD_ROOT
 %doc CHANGES README 
 
 %attr(755,root,root) /usr/bin/linbot
-%attr(755,root,root) /usr/lib/linbot/linbot.py
-%attr(644,root,root) /usr/lib/linbot/*.pyc
-%attr(644,root,root) /usr/lib/linbot/config.py
-%attr(644,root,root) /usr/lib/linbot/linbot.css
-%attr(644,root,root) /usr/lib/linbot/myUrlLib.py
-%attr(644,root,root) /usr/lib/linbot/robotparser.py
-%attr(644,root,root) /usr/lib/linbot/buttons/*
+%attr(755,root,root) %{_libdir}/linbot/linbot.py
+%attr(644,root,root) %{_libdir}/linbot/*.pyc
+%attr(644,root,root) %{_libdir}/linbot/config.py
+%attr(644,root,root) %{_libdir}/linbot/linbot.css
+%attr(644,root,root) %{_libdir}/linbot/myUrlLib.py
+%attr(644,root,root) %{_libdir}/linbot/robotparser.py
+%attr(644,root,root) %{_libdir}/linbot/buttons/*
 %{_mandir}/man1/*
 
 %changelog
