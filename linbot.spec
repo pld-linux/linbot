@@ -12,7 +12,7 @@ Patch:	     linbot.diff
 URL:	     http://starship.skyport.net/crew/marduk/linbot
 BuildArch:   noarch
 Requires:    python >= 1.5.1
-BuildRoot:   /tmp/%{name}-%{version}-buildroot
+BuildRoot:	/tmp/%{name}-%{version}-buildroot
 
 %description
 Linbot is a FREE clone of Linkbot and plans to incorporate many of 
