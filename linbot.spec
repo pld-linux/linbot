@@ -3,13 +3,13 @@ Summary(pl):	Zadziwiaj±ce Narzêdzie Do Zarz±dzania Serwisami WWW
 Name:		linbot
 Version:	1.0b7
 Release:	1
-Copyright:	GPL
+License:	GPL
 Vendor:		Marduk <marduk@starship.skyport.net>
 Group:		Applications/Networking
 Group(pl):	Aplikacje/Sieciowe
-Source:		%{name}-%{version}.tgz
+Source:		ftp://sunsite.unc.edu/pub/Linux/apps/www/misc/%{name}-%{version}.tgz
 Patch:		linbot-config.patch
-URL:		http://starship.skyport.net/crew/marduk/linbot
+URL:		http://starship.python.net/crew/marduk/linbot/
 BuildArch:	noarch
 Requires:	python >= 1.5.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
