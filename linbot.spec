@@ -7,6 +7,7 @@ License:	GPL
 Vendor:		Marduk <marduk@starship.skyport.net>
 Group:		Applications/Networking
 Source0:	ftp://sunsite.unc.edu/pub/Linux/apps/www/misc/%{name}-%{version}.tgz
+# Source0-md5:	09f8c7b5a3ba58a1e056921a91be56ee
 Patch0:		%{name}-config.patch
 URL:		http://starship.python.net/crew/marduk/linbot/
 BuildArch:	noarch
