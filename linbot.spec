@@ -55,14 +55,12 @@ install contrib/plugins/*.py* $RPM_BUILD_ROOT%{_libdir}/linbot
 install linbot.css $RPM_BUILD_ROOT%{_libdir}/linbot
 (cd $RPM_BUILD_ROOT%{_bindir}; ln -sf ../lib/linbot/linbot.py linbot)
 
-gzip -9nf CHANGES README BUGS TODO
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES.gz README.gz BUGS.gz TODO.gz
+%doc CHANGES README BUGS TODO
 %attr(755,root,root) %{_bindir}/linbot
 %attr(755,root,root) %{_libdir}/linbot/linbot.py
 %{_libdir}/linbot/linbot.pyc
