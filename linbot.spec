@@ -53,7 +53,7 @@ cp *.* $RPM_BUILD_ROOT%{_libdir}/linbot
 cp contrib/cwlinbot.gif $RPM_BUILD_ROOT%{_libdir}/linbot/buttons/linbot.gif
 cp contrib/buttons/*.* $RPM_BUILD_ROOT%{_libdir}/linbot/buttons
 cp contrib/linbot.1 $RPM_BUILD_ROOT%{_mandir}/man1
-cd $RPM_BUILD_ROOT/usr/bin; ln -s ../lib/linbot/linbot.py linbot
+cd $RPM_BUILD_ROOT%{_bindir}; ln -s ../lib/linbot/linbot.py linbot
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/*
 
@@ -64,7 +64,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc CHANGES README 
 
-%attr(755,root,root) /usr/bin/linbot
+%attr(755,root,root) %{_bindir}/linbot
 %attr(755,root,root) %{_libdir}/linbot/linbot.py
 %attr(644,root,root) %{_libdir}/linbot/*.pyc
 %attr(644,root,root) %{_libdir}/linbot/config.py
