@@ -52,10 +52,10 @@ install -d $RPM_BUILD_ROOT/usr/{lib/linbot/buttons,bin,man/man1}
 cp *.* $RPM_BUILD_ROOT/usr/lib/linbot
 cp contrib/cwlinbot.gif $RPM_BUILD_ROOT/usr/lib/linbot/buttons/linbot.gif
 cp contrib/buttons/*.* $RPM_BUILD_ROOT/usr/lib/linbot/buttons
-cp contrib/linbot.1 $RPM_BUILD_ROOT/usr/man/man1
+cp contrib/linbot.1 $RPM_BUILD_ROOT%{_mandir}/man1
 cd $RPM_BUILD_ROOT/usr/bin; ln -s ../lib/linbot/linbot.py linbot
 
-gzip -9nf $RPM_BUILD_ROOT/usr/man/man1/*
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -72,7 +72,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(644,root,root) /usr/lib/linbot/myUrlLib.py
 %attr(644,root,root) /usr/lib/linbot/robotparser.py
 %attr(644,root,root) /usr/lib/linbot/buttons/*
-%attr(644,root, man) /usr/man/man1/*
+%attr(644,root, man) %{_mandir}/man1/*
 
 %changelog
 * Sat Oct 03 1998 Arkadiusz Mi¶kiewicz <misiek@misiek.eu.org>
