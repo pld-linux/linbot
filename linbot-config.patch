@@ -1,0 +1,29 @@
+diff -ur linbot-1.0b7/config.py linbot-1.0b7.new/config.py
+--- linbot-1.0b7/config.py	Sun Jan 10 02:01:43 1999
++++ linbot-1.0b7.new/config.py	Mon Jul 19 20:35:44 1999
+@@ -106,7 +106,7 @@
+ # This is a URL (absolute or relative) of a level 1 Cascading Stylesheet to be
+ # used in all reports.  See the default linbot.css as well as the HTML source
+ # for ideas on making your own .css for Linbot.
+-STYLESHEET = 'http://starship.skyport.net/crew/marduk/linbot/linbot.css'
++STYLESHEET = '/usr/lib/linbot/linbot.css'
+ 
+ ##### The Navigation (menu) frame/page ############
+ NAVBAR_FILENAME    = 'navbar.html'
+@@ -118,7 +118,7 @@
+ 
+ # url to logo (image) shown on all pages.  If you change this you will also
+ # want to change the LOGO_ALT option below
+-LOGO_HREF="http://starship.skyport.net/crew/marduk/linbot/linbot.gif"
++LOGO_HREF = None
+ 
+ ##### Configuratin for specific plugins #####
+ REPORT_SITEMAP_LEVEL = 5 # How many levels deep to display the site map
+@@ -139,6 +139,6 @@
+ 
+ ################## you shouldn't need to change anything below #################
+ 
+-__version__='0.9'
++__version__='1.0b7'
+ __author__='marduk (marduk@python.net)'  
+ LINBOT_HOME='http://starship.skyport.net/crew/marduk/linbot/'
