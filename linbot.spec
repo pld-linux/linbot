@@ -73,21 +73,3 @@ rm -rf $RPM_BUILD_ROOT
 %attr(644,root,root) %{_libdir}/linbot/robotparser.py
 %attr(644,root,root) %{_libdir}/linbot/buttons/*
 %{_mandir}/man1/*
-
-%changelog
-* Sat Oct 03 1998 Arkadiusz Mi¶kiewicz <misiek@misiek.eu.org>
-  [0.9-1d]
-- added -q to %setup
-- added pl translations
-- added %clean section
-- removed %build section
-- buildarch = noarch
-- and more
-- linbot now uses gif's ftom contrib
-
-* Mon Aug 03 1998 Arkadiusz Mi¶kiewicz <misiek@debian.eu.org>
-  [0.6-1d]
-- small changes in %doc
-
-* Tue Jul 21 1998 Arkadiusz Mi¶kiewicz <misiek@misiek.eu.org>
-- initial rpm release
