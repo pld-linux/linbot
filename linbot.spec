@@ -1,17 +1,17 @@
-Summary:     Amazing Site Management Tool for webmasters
-Summary(pl): Zadziwiaj±ce Narzêdzie Do Zarz±dzania Serwisami WWW
-Name:	     linbot
-Version:     0.9
-Release:     1d
-Copyright:   GPL
-Vendor:	     Marduk <marduk@starship.skyport.net>
-Group:	     Applications/Networking
-Group(pl):   Aplikacje/Sieciowe
-Source:	     %{name}-%{version}.tar.gz
-Patch:	     linbot.diff
-URL:	     http://starship.skyport.net/crew/marduk/linbot
-BuildArch:   noarch
-Requires:    python >= 1.5.1
+Summary:	Amazing Site Management Tool for webmasters
+Summary(pl):	Zadziwiaj±ce Narzêdzie Do Zarz±dzania Serwisami WWW
+Name:		linbot
+Version:	1.0b7
+Release:	1
+Copyright:	GPL
+Vendor:		Marduk <marduk@starship.skyport.net>
+Group:		Applications/Networking
+Group(pl):	Aplikacje/Sieciowe
+Source:		%{name}-%{version}.tgz
+Patch:		linbot-config.patch
+URL:		http://starship.skyport.net/crew/marduk/linbot
+BuildArch:	noarch
+Requires:	python >= 1.5.1
 BuildRoot:	/tmp/%{name}-%{version}-buildroot
 
 %description
@@ -43,33 +43,31 @@ Linbot pozwala webmasterom na:
 %patch -p1
 
 %build
-./linbot.py ||
+./linbot.py || :
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/usr/{lib/linbot/buttons,bin,man/man1}
+install -d $RPM_BUILD_ROOT{%{_libdir}/linbot,%{_bindir}}
 
-cp *.* $RPM_BUILD_ROOT%{_libdir}/linbot
-cp contrib/cwlinbot.gif $RPM_BUILD_ROOT%{_libdir}/linbot/buttons/linbot.gif
-cp contrib/buttons/*.* $RPM_BUILD_ROOT%{_libdir}/linbot/buttons
-cp contrib/linbot.1 $RPM_BUILD_ROOT%{_mandir}/man1
-cd $RPM_BUILD_ROOT%{_bindir}; ln -s ../lib/linbot/linbot.py linbot
+install *.py* $RPM_BUILD_ROOT%{_libdir}/linbot
+install plugins/*.py* $RPM_BUILD_ROOT%{_libdir}/linbot
+install schemes/*.py* $RPM_BUILD_ROOT%{_libdir}/linbot
+install contrib/plugins/*.py* $RPM_BUILD_ROOT%{_libdir}/linbot
+install linbot.css $RPM_BUILD_ROOT%{_libdir}/linbot
+(cd $RPM_BUILD_ROOT%{_bindir}; ln -s ../lib/linbot/linbot.py linbot)
 
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/*
+gzip -9nf CHANGES README BUGS TODO
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES README 
-
+%doc CHANGES.gz README.gz BUGS.gz TODO.gz
 %attr(755,root,root) %{_bindir}/linbot
 %attr(755,root,root) %{_libdir}/linbot/linbot.py
-%attr(644,root,root) %{_libdir}/linbot/*.pyc
-%attr(644,root,root) %{_libdir}/linbot/config.py
-%attr(644,root,root) %{_libdir}/linbot/linbot.css
-%attr(644,root,root) %{_libdir}/linbot/myUrlLib.py
-%attr(644,root,root) %{_libdir}/linbot/robotparser.py
-%attr(644,root,root) %{_libdir}/linbot/buttons/*
-%{_mandir}/man1/*
+%{_libdir}/linbot/linbot.pyc
+%{_libdir}/linbot/_*
+%{_libdir}/linbot/[a-k]*
+%{_libdir}/linbot/[m-z]*
+%{_libdir}/linbot/linbot.css
