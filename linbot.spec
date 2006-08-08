@@ -40,7 +40,7 @@ Linbot pozwala webmasterom na:
 
 %prep
 %setup -q
-%patch -p1
+%patch0 -p1
 
 %build
 ./linbot.py || :
