@@ -1,5 +1,5 @@
 Summary:	Amazing Site Management Tool for webmasters
-Summary(pl):	Zadziwiaj眂e Narz阣zie Do Zarz眃zania Serwisami WWW
+Summary(pl.UTF-8):   Zadziwiaj膮ce Narz臋dzie Do Zarz膮dzania Serwisami WWW
 Name:		linbot
 Version:	1.0b7
 Release:	1
@@ -26,17 +26,17 @@ Linbot allows webmasters to:
 - View Portfolio Of Inline Images
 - Do All This Periodically And Without User Intervention
 
-%description -l pl
-Linbot to DARMOWY klon Linkbota, kt髍y zawiera wiele "features"
-podobnie jak i zawiera w砤sne.
+%description -l pl.UTF-8
+Linbot to DARMOWY klon Linkbota, kt贸ry zawiera wiele "features"
+podobnie jak i zawiera w艂asne.
 
 Linbot pozwala webmasterom na:
-- Przegl眃anie Struktury Serwisu
-- Wyszukiwanie Nieprawid硂wych Odno秐ik體
+- Przegl膮danie Struktury Serwisu
+- Wyszukiwanie Nieprawid艂owych Odno艣nik贸w
 - Wyszukiwanie Starych Stron
-- Przegl眃anie Listy Odno秐ik體 Wskazuj眂ych Na Inne Serwisy
-- Przegl眃anie Obrazk體 Z Danego Serwisu
-- Robienie Tego Wszystkiego Bez Ingerencji U縴tkownika
+- Przegl膮danie Listy Odno艣nik贸w Wskazuj膮cych Na Inne Serwisy
+- Przegl膮danie Obrazk贸w Z Danego Serwisu
+- Robienie Tego Wszystkiego Bez Ingerencji U偶ytkownika
 
 %prep
 %setup -q
