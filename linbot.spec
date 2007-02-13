@@ -1,5 +1,5 @@
 Summary:	Amazing Site Management Tool for webmasters
-Summary(pl.UTF-8):   Zadziwiające Narzędzie Do Zarządzania Serwisami WWW
+Summary(pl.UTF-8):	Zadziwiające Narzędzie Do Zarządzania Serwisami WWW
 Name:		linbot
 Version:	1.0b7
 Release:	1
